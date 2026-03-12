@@ -1,65 +1,160 @@
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import BlogCard from "@/components/BlogCard";
+import Hero from "@/components/Hero";
+import Button from "@/components/Button";
+import CTASection from "@/components/CTASection";
+import Newsletter from "@/components/Newsletter";
 import Image from "next/image";
+import { communityLink } from "@/utils/constants";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="min-h-screen">
+      <Header />
+
+      <Hero
+        backgroundImage="/images/hero-bg-1.png"
+        title="Responsible & Representative AI for Africa"
+        description="AI Lagos is building a community committed to responsible, ethical, and locally informed AI adoption across the continent."
+      />
+
+      {/* Vision & Stats Section */}
+      <section className="py-18 bg-white relative overflow-hidden">
+        {/* Decorative Sparkles */}
+        <div className="absolute top-10 right-10 opacity-10">
+          <svg
+            width="200"
+            height="200"
+            viewBox="0 0 200 200"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+            <path
+              d="M100 0C100 55.2285 144.772 100 200 100C144.772 100 100 144.772 100 200C100 144.772 55.2285 100 0 100C55.2285 100 100 55.2285 100 0Z"
+              fill="currentColor"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </svg>
         </div>
-      </main>
-    </div>
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-5">
+          <svg
+            width="400"
+            height="400"
+            viewBox="0 0 200 200"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M100 0C100 55.2285 144.772 100 200 100C144.772 100 100 144.772 100 200C100 144.772 55.2285 100 0 100C55.2285 100 100 55.2285 100 0Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
+          <div>
+            <h2 className="text-3xl md:text-[40px] font-semibold leading-[50px] mb-9 max-w-5xl">
+              Our vision is to be a community of curious people who shape and
+              showcase the use and impact of responsible, representative AI in
+              Africa.
+            </h2>
+            <Button href={communityLink} className="mb-20 md:mb-32 w-fit">
+              Join the Community
+            </Button>
+          </div>
+
+          <div className="w-full justify-between flex items-end">
+            <div className="flex-1 flex gap-12">
+              <div className="flex flex-col gap-4 w-full max-w-[212px]">
+                <h3 className="text-3xl font-semibold md:text-[48px] leading-[30px]">
+                  02+
+                </h3>
+                <p className="text-[10px] md:text-sm text-black leading-[18px]">
+                  <span className="font-semibold">Events Hosted Workshops</span>
+                  <br /> and community conversations.
+                </p>
+              </div>
+              <div className="flex flex-col gap-4 w-full max-w-[191px]">
+                <h3 className="text-3xl font-semibold md:text-[48px] leading-[30px]">
+                  100+
+                </h3>
+                <p className="text-[10px] md:text-sm text-black leading-[18px]">
+                  <span className="font-semibold">
+                    Speakers & Experts Engaged
+                  </span>
+                  <br /> Local and international voices.
+                </p>
+              </div>
+              <div className="flex flex-col gap-4 w-full max-w-[212px]">
+                <h3 className="text-3xl font-semibold md:text-[48px] leading-[30px]">
+                  50+
+                </h3>
+                <p className="text-[10px] md:text-sm text-black leading-[18px]">
+                  <span className="font-semibold">Community Members</span>
+                  <br /> A growing network of curious minds.
+                </p>
+              </div>
+            </div>
+
+            <div className="relative flex-[0.8] w-full">
+              <Image
+                src="/images/ejiro.svg"
+                alt="AI Lagos Speaker"
+                width={500}
+                height={500}
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CTASection
+        title="AI is here. Will Africa shape it or follow others? Join AI Lagos to learn together, build responsibly, ask hard questions, and drive ethical, inclusive AI across Africa. Your voice matters."
+        buttonText="Join the Community"
+        buttonHref={communityLink}
+        imageSrc="/images/team.svg"
+        imageAlt="AI Lagos Team"
+      />
+
+      {/* Blog & Resources Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="flex justify-between items-end mb-12 md:mb-15">
+            <h2 className="text-2xl md:text-[40px] font-semibold leading-[50px]">
+              Blog & resources
+            </h2>
+            <Button href="/blog" variant="black" className=" px-[31px]!">
+              View all Post
+            </Button>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <BlogCard
+              image="/images/speaker.svg"
+              tag="Tech"
+              date="Mar 12, 2024"
+              title="Key Steps for Understanding the Early Signs Your Parent Needs Assisted Living"
+            />
+            <BlogCard
+              image="/images/speaker.svg"
+              tag="Tech"
+              date="Mar 12, 2024"
+              title="Key Steps for Understanding the Early Signs Your Parent Needs Assisted Living"
+            />
+            <BlogCard
+              image="/images/speaker.svg"
+              tag="Tech"
+              date="Mar 12, 2024"
+              title="Key Steps for Understanding the Early Signs Your Parent Needs Assisted Living"
+            />
+          </div>
+        </div>
+      </section>
+
+      <Newsletter />
+
+      <Footer />
+    </main>
   );
 }

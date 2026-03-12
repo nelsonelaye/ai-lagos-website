@@ -10,8 +10,11 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: #FFE202;
+  --color-secondary: #FFF200;
   --color-neutral-100: #F4F4F4;
   --color-neutral-200: #F9F9F9;
+  
+  --color-accent: #F1EFEF;
 
   --color-black-200: #26262A;
 
@@ -33,3 +36,18 @@ body {
   color: var(--foreground);
   font-family: var(--font-family-anek);
 }
+
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 64px;
+  }
+}
+

@@ -1,0 +1,34 @@
+import Image from 'next/image';
+import { IoArrowForwardSharp } from 'react-icons/io5';
+
+interface NewsletterProps {
+  title?: string;
+  placeholder?: string;
+}
+
+const Newsletter = ({ 
+  title = "Join AI Lagos to get updates, insights, and stories shaping responsible, inclusive AI in Africa.", 
+  placeholder = "Enter your mail" 
+}: NewsletterProps) => {
+  return (
+    <section className="container mx-auto mb-15">
+      <div className="bg-primary rounded-[10px] py-10 px-6 md:px-12 md:pt-[68px] md:pb-[94px] flex flex-col items-center text-center relative">
+        <h2 className="text-2xl md:text-[40px] font-semibold mb-8 max-w-4xl leading-[50px] md:mb-[55px]">
+          {title}
+        </h2>
+        <div className="bg-secondary w-full max-w-2xl relative h-[64px] flex items-center rounded-[1000px] border-[2px] border-black px-8">
+          <input
+            type="email"
+            placeholder={placeholder}
+            className="w-full h-full  border-0 outline-0 bg-transparent text-sm md:text-base leading-[20px] placeholder:text-black"
+          />
+          <div className="absolute right-6 top-1/2 -translate-y-1/2">
+            <IoArrowForwardSharp size="37px" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Newsletter;
