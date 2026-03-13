@@ -31,78 +31,82 @@ export default function About() {
 
   const team = [
     {
-      name: "Ahunna Ogunedo",
-      role: "Founder/Project Lead",
-      image: "/images/ahunna.svg",
-      linkedin: "https://www.linkedin.com/in/ahunna-ogunedo-5a5b5b5b/",
-    },
-    {
       name: "Ejiro Esigbone",
       role: "Anywork, Head of Execution & Vibes",
       image: "/images/ejiro-team.svg",
-      linkedin: "https://www.linkedin.com/in/ejiro-esigbone/",
+      linkedin: "https://www.linkedin.com/in/ejiroesigbone/",
     },
     {
-      name: "Tito",
-      role: "Product Designer",
+      name: "Ahunna Ogunedo",
+      role: "Head, Partnerships & Fundraising",
+      image: "/images/ahunna.svg",
+      linkedin: "https://www.linkedin.com/in/ahunna-ogunedo-567606a5",
+    },
+
+    {
+      name: "Tito Oyefeso",
+      role: "Head, Programs & Events",
       image: "/images/tito.svg",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/titooyefeso/",
     },
     {
-      name: "Francis",
-      role: "Software Engineer",
+      name: "Francis Odeyemi",
+      role: "Head, Communications & Community",
       image: "/images/francis.svg",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/francisodeyemi/",
     },
   ];
 
   return (
     <main className="min-h-screen bg-white">
       <Header />
-      
+
       <Hero
         backgroundImage="/images/hero-bg-2.png"
         title="Shaping Africa's AI Future, Responsibly"
         description="AI Lagos exists to ensure Africa has a voice in every AI conversation, decision, and innovation. Through education, community, and dialogue, we promote responsible, ethical, and inclusive AI adoption across the continent."
       />
 
-      {/* Intro Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl">
-            <h2 className="text-2xl md:text-[32px] font-semibold leading-[44px] mb-8">
-              We are a community of curious minds dedicated to shaping and showcasing responsible, representative AI in Africa. Through education, open conversations, events, and hands-on engagement, we provide spaces for learning, questioning, building, and influencing AI—driving a movement that ensures technology serves everyone across the continent.
+      <section className="py-12 md:py-19.5 bg-white">
+        <div className="container mx-auto px-6 ">
+          <div className="w-full md:w-[80%]">
+            <h2 className="text-2xl md:text-[40px] font-semibold md:leading-[50px] mb-[50px]">
+              We are a community of curious minds dedicated to shaping and
+              showcasing responsible, representative AI in Africa. Through
+              education, open conversations, events, and hands-on engagement, we
+              provide spaces for learning, questioning, building, and
+              influencing AI—driving a movement that ensures technology serves
+              everyone across the continent.
             </h2>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="pb-24 bg-white">
+      <section className="pb-12 md:pb-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
-              <ValueCard 
-                key={index} 
-                icon={value.icon} 
+              <ValueCard
+                key={index}
+                icon={value.icon}
                 title={value.title}
-                text={value.text} 
+                text={value.text}
               />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Powered By Section */}
-      <section className="pb-24 bg-white">
+      <section className="py-12 md:pb-19.5 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-2xl md:text-[32px] font-semibold leading-[40px] mb-12 max-w-2xl">
-            AI Lagos is powered by thinkers, builders, and organizers dedicated to responsibly shaping Africa&apos;s AI story.
+          <h2 className="text-2xl md:text-[40px] font-semibold md:leading-[50px] mb-12 md:mb-19.5 max-w-5xl">
+            AI Lagos is powered by thinkers, builders, and organizers dedicated
+            to responsibly shaping Africa&apos;s AI story.
           </h2>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {team.map((member, index) => (
-              <TeamCard 
+              <TeamCard
                 key={index}
                 image={member.image}
                 name={member.name}

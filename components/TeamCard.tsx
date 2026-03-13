@@ -10,34 +10,35 @@ interface TeamCardProps {
 
 const TeamCard = ({ image, name, role, linkedin }: TeamCardProps) => {
   return (
-    <div className="bg-[#F9F9F9] p-4 rounded-[20px] overflow-hidden group h-full flex flex-col">
-      <div className="relative aspect-[16/11] w-full rounded-[15px] overflow-hidden mb-6">
+    <div className="bg-accent-2 p-2 md:p-4.5 rounded-[20px] overflow-hidden group h-full flex flex-col">
+      <div className="relative w-full h-[300px] md:h-[457px] rounded-[20px] overflow-hidden">
         <Image
           src={image}
           alt={name}
-          fill
-          className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+          width={500}
+          height={500}
+          className="object-cover w-full h-full object-top  hover:scale-110 transition-all duration-500"
         />
       </div>
-      <div className="px-2 pb-4 flex justify-between items-end mt-auto">
+      <div className="px-[11px] pt-[15px] pb-[27px] flex justify-between items-end">
         <div>
-          <h3 className="text-xl md:text-[24px] font-bold leading-[30px] text-black mb-1">
+          <h3 className="text-xl md:text-[32px] font-semibold md:leading-[50px] text-black mb-1">
             {name}
           </h3>
           {role && (
-            <p className="text-sm md:text-base text-black leading-[20px]">
+            <p className="text-lg md:text-[24px] text-black md:leading-[30px]">
               {role}
             </p>
           )}
         </div>
         {linkedin && (
-          <a 
-            href={linkedin} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-[#A2A2A2] hover:text-primary transition-colors mb-1"
+          <a
+            href={linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-100 hover:text-black transition-colors mb-1"
           >
-            <FaLinkedin size="24px" />
+            <FaLinkedin className="cursor-pointer text-xl md:text-[28px]" />
           </a>
         )}
       </div>
