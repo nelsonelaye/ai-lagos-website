@@ -10,7 +10,7 @@ interface HeroProps {
 
 const Hero = ({ backgroundImage, title, description }: HeroProps) => {
   return (
-    <section className="relative h-[80vh] sm:h-screen w-full flex items-center justify-center overflow-hidden">
+    <section className="relative h-[80vh] sm:h-screen w-full flex items-center justify-center overflow-hidden bg-neutral-100">
       <Image
         src={backgroundImage}
         alt="Hero Background"

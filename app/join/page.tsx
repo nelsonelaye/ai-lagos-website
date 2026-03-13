@@ -28,7 +28,7 @@ export default function Join() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[13px]">
-            {["member-1.svg", "member-2.svg", "member-3.svg"].map((member) => (
+            {["member-1.png", "member-2.png", "member-3.png"].map((member) => (
               <div
                 key={member}
                 className="bg-neutral-100 rounded-[10px] w-full h-[350px] md:h-[480px] overflow-hidden"
@@ -52,7 +52,7 @@ export default function Join() {
           title="Learn, connect, and shape Africa's AI conversation. Access events, discussions, and resources, meet like-minded individuals, share ideas, and grow your knowledge, network, and impact in AI."
           buttonText="Join the Community"
           buttonHref={communityLink}
-          imageSrc="/images/team-1.svg"
+          imageSrc="/images/team-1.png"
           imageAlt="Community Member"
         />
 
@@ -62,7 +62,7 @@ export default function Join() {
           title="Help drive AI Lagos forward. Contribute your skills to events, content, and partnerships, amplify our impact, and shape an ethical, inclusive, and powerful AI future for Africa."
           buttonText="Join the Community"
           buttonHref={volunteerLink}
-          imageSrc="/images/team-2.svg"
+          imageSrc="/images/team-2.png"
           imageAlt="Volunteer"
         />
       </div>

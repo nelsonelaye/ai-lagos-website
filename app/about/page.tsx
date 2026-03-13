@@ -33,26 +33,26 @@ export default function About() {
     {
       name: "Ejiro Esigbone",
       role: "Anywork, Head of Execution & Vibes",
-      image: "/images/ejiro-team.svg",
+      image: "/images/ejiro-team.png",
       linkedin: "https://www.linkedin.com/in/ejiroesigbone/",
     },
     {
       name: "Ahunna Ogunedo",
       role: "Head, Partnerships & Fundraising",
-      image: "/images/ahunna.svg",
+      image: "/images/ahunna.png",
       linkedin: "https://www.linkedin.com/in/ahunna-ogunedo-567606a5",
     },
 
     {
       name: "Tito Oyefeso",
       role: "Head, Programs & Events",
-      image: "/images/tito.svg",
+      image: "/images/tito.png",
       linkedin: "https://www.linkedin.com/in/titooyefeso/",
     },
     {
       name: "Francis Odeyemi",
       role: "Head, Communications & Community",
-      image: "/images/francis.svg",
+      image: "/images/francis.png",
       linkedin: "https://www.linkedin.com/in/francisodeyemi/",
     },
   ];
