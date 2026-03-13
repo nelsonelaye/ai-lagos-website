@@ -139,19 +139,19 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-3  md:gap-8">
             <BlogCard
-              image="/images/speaker.svg"
+              image="/images/speaker.png"
               tag="Tech"
               date="Mar 12, 2024"
               title="Key Steps for Understanding the Early Signs Your Parent Needs Assisted Living"
             />
             <BlogCard
-              image="/images/speaker.svg"
+              image="/images/speaker.png"
               tag="Tech"
               date="Mar 12, 2024"
               title="Key Steps for Understanding the Early Signs Your Parent Needs Assisted Living"
             />
             <BlogCard
-              image="/images/speaker.svg"
+              image="/images/speaker.png"
               tag="Tech"
               date="Mar 12, 2024"
               title="Key Steps for Understanding the Early Signs Your Parent Needs Assisted Living"
