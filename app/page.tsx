@@ -99,9 +99,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative flex-[0.8] w-full">
+            <div className="relative flex-[0.8] w-full bg-neutral-100">
               <Image
-                src="/images/ejiro.svg"
+                src="/images/ejiro.png"
                 alt="AI Lagos Speaker"
                 width={500}
                 height={500}
@@ -116,7 +116,7 @@ export default function Home() {
         title="AI is here. Will Africa shape it or follow others? Join AI Lagos to learn together, build responsibly, ask hard questions, and drive ethical, inclusive AI across Africa. Your voice matters."
         buttonText="Join the Community"
         buttonHref={communityLink}
-        imageSrc="/images/team.svg"
+        imageSrc="/images/team.png"
         imageAlt="AI Lagos Team"
       />
 
