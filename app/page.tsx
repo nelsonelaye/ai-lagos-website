@@ -23,7 +23,7 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10">
           {/* Sparkeles */}
 
-          <div className="absolute top-[-58px] right-16">
+          <div className="hidden md:block absolute top-[-58px] right-16">
             <Image
               src="/images/spark-grey.svg"
               alt="Sparkle"
@@ -47,7 +47,7 @@ export default function Home() {
           <div className="w-full relative justify-between flex gap-15 md:items-end flex-col md:flex-row">
             {/* More Sparkeles */}
 
-            <div className="absolute top-[80px] w-[560px] h-[600px] left-0 -translate-x-[60%] ">
+            <div className="absolute top-0 md:top-[80px] w-[560px] h-[600px] left-0 -translate-x-[60%] ">
               <Image
                 src="/images/spark-grey.svg"
                 alt="Sparkle"
@@ -56,7 +56,8 @@ export default function Home() {
                 className="w-full h-full text-black"
               />
             </div>
-            <div className="absolute top-[80px] w-[560px] h-[600px] left-0 -translate-x-[60%] ">
+
+            <div className="absolute top-[-28px] w-[170px] md:w-[317px] h-[170px] md:h-[311px] left-1/2 md:-translate-x-[80%]  ">
               <Image
                 src="/images/spark-grey.svg"
                 alt="Sparkle"
@@ -65,6 +66,7 @@ export default function Home() {
                 className="w-full h-full text-black"
               />
             </div>
+
             <div className="flex-1 flex flex-col sm:flex-row items-center max-sm:text-center gap-12">
               <div className="flex flex-col gap-4 w-full max-w-[212px]">
                 <h3 className="text-3xl font-semibold md:text-[48px] leading-[30px]">
