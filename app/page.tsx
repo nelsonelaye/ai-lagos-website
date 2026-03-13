@@ -33,7 +33,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="mb-[6px]">
+          <div className="mb-15 md:mb-[6px]">
             <h2 className="text-2xl md:text-[40px] font-semibold md:leading-[50px] mb-9 max-w-5xl">
               Our vision is to be a community of curious people who shape and
               showcase the use and impact of responsible, representative AI in
@@ -44,7 +44,7 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="w-full relative justify-between flex gap-15 md:items-end flex-col md:flex-row">
+          <div className="w-full relative justify-between flex gap-15 md:items-end flex-col md:flex-row ">
             {/* More Sparkeles */}
 
             <div className="absolute top-0 md:top-[80px] w-[560px] h-[600px] left-0 -translate-x-[60%] ">
