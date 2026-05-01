@@ -35,6 +35,7 @@ const Header = () => {
             <Link
               key={link.name}
               href={link.href}
+              target={link.target}
               className="hover:text-primary transition-colors duration-700 text-white text-lg"
             >
               {link.name}
@@ -60,7 +61,7 @@ const Header = () => {
         }`}
       >
         <div
-          className={`absolute top-0 right-0 h-screen w-[90%] bg-black/40 backdrop-blur-md shadow-lg 
+          className={`absolute top-0 right-0 h-screen w-full bg-black/40 backdrop-blur-md shadow-lg 
       transform transition-transform duration-350 ease-out-in md:hidden!
       ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}
     `}
@@ -87,6 +88,8 @@ const Header = () => {
                 <Link
                   key={link.name}
                   href={link.href}
+              target={link.target}
+
                   className="hover:text-primary transition-colors duration-700 text-white text-2xl"
                 >
                   {link.name}

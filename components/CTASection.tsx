@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Button from './Button';
+import { cn } from '@/utils/cn';
 
 interface CTASectionProps {
   title: string;
@@ -9,6 +10,7 @@ interface CTASectionProps {
   imageAlt: string;
   label?: string;
   reverse?: boolean;
+  className?: string;
 }
 
 const CTASection = ({
@@ -19,9 +21,10 @@ const CTASection = ({
   imageAlt,
   label,
   reverse = false,
+  className,
 }: CTASectionProps) => {
   return (
-    <section className="bg-white">
+    <section className={cn("bg-white", className)}>
       <div className="container mx-auto">
         <div className="w-full flex flex-col md:flex-row md:h-[585px] gap-5">
           <div

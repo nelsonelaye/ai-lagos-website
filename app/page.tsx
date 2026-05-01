@@ -19,7 +19,7 @@ export default function Home() {
         description="AI Lagos is building a community committed to responsible, ethical, and locally informed AI adoption across the continent."
       />
 
-      <section className="py-12 pb-28  md:py-19.5 md:pb-34 bg-white overflow-hidden relative">
+      <section className="py-12 pb-28 md:py-19.5 md:pb-34 bg-white overflow-hidden relative">
         <div className="container mx-auto px-6 relative z-10">
           {/* Sparkeles */}
 
@@ -117,11 +117,11 @@ export default function Home() {
         buttonText="Join the Community"
         buttonHref={communityLink}
         imageSrc="/images/team.png"
-        imageAlt="AI Lagos Team"
+        imageAlt="AI Lagos Team"className="mb-28 md:mb-34"
       />
 
       {/* Blog & Resources Section */}
-      <section className="py-20.5 pb-11 bg-white">
+      <section className="py-20.5 pb-11 bg-white hidden">
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-end mb-12 md:mb-15">
             <h2 className="text-2xl md:text-[40px] font-semibold leading-[50px]">
