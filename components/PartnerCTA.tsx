@@ -30,7 +30,8 @@ const PartnerCTA = ({
             </p>
           </div>
           <Button
-            href={buttonHref}
+            // href={buttonHref}
+            href="mailto:info@ailagos.org?subject=AI Lagos Partnership&body=Hi AI Lagos team, I'm interested in partnering with you."
             variant="secondary"
             className="lg:mr-[52px] "
           >
