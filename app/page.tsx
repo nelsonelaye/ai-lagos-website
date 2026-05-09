@@ -42,7 +42,7 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="w-full relative justify-between flex md:gap-8 lg:gap-15 md:items-end flex-col md:flex-row ">
+          <div className="w-full relative justify-between flex gap-8 lg:gap-15 md:items-end flex-col md:flex-row ">
             {/* More Sparkeles */}
             <div className="absolute top-0 md:top-[80px] w-[560px] h-[600px] left-0 -translate-x-[60%] ">
               <Image
