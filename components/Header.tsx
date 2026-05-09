@@ -10,7 +10,8 @@ const navLinks = [
   { name: "home", href: "/" },
   { name: "about us", href: "/about" },
   { name: "events", href: eventLink, target: "_blank" },
-  { name: "blog", href: substackLink, target: "_blank" },
+  { name: "partner with us", href: "/partner" },
+  // { name: "blog", href: substackLink, target: "_blank" },
   { name: "join us", href: "/join" },
   { name: "contact us", href: "#footer" },
 ];
@@ -28,6 +29,7 @@ const Header = () => {
             width={176}
             height={82}
             className="object-contain w-full"
+            priority
           />
         </Link>
         <nav className="hidden md:flex space-x-8  ">

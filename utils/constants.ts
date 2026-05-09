@@ -4,6 +4,6 @@ export const volunteerLink =
   "https://docs.google.com/forms/d/e/1FAIpQLSdmRsqqLJNUQYR43sNjEfKqspMZB9d3yS945V26JR6mrkrKUA/viewform";
 
 export const eventLink =
-  "https://www.usetika.africa/events/ai-is-coming-for-your-job-b30b12bf";
+  "https://www.usetika.africa/events/ai-at-work-19dd18eb";
 
 export const substackLink = "https://substack.com/@ailagos";

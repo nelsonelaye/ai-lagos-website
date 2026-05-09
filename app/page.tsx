@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import BlogCard from "@/components/BlogCard";
 import Hero from "@/components/Hero";
 import Button from "@/components/Button";
@@ -10,8 +8,8 @@ import { communityLink, substackLink } from "@/utils/constants";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Header />
+    <div>
+ 
 
       <Hero
         backgroundImage="/images/hero-bg-1.png"
@@ -162,7 +160,7 @@ export default function Home() {
 
       <Newsletter />
 
-      <Footer />
-    </main>
+
+    </div>
   );
 }

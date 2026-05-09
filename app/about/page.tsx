@@ -1,5 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+// import Header from "@/components/Header";
+// import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Newsletter from "@/components/Newsletter";
 import ValueCard from "@/components/ValueCard";
@@ -32,7 +32,7 @@ export default function About() {
   const team = [
     {
       name: "Ejiro Esigbone",
-      role: "Anywork, Head of Execution & Vibes",
+      role: "Executive Director",
       image: "/images/ejiro-team.png",
       linkedin: "https://www.linkedin.com/in/ejiroesigbone/",
     },
@@ -58,8 +58,7 @@ export default function About() {
   ];
 
   return (
-    <main className="min-h-screen bg-white">
-      <Header />
+<div>
 
       <Hero
         backgroundImage="/images/hero-bg-2.png"
@@ -70,7 +69,7 @@ export default function About() {
       <section className="py-12 md:py-19.5 bg-white">
         <div className="container mx-auto px-6 ">
           <div className="w-full md:w-[80%]">
-            <h2 className="text-2xl md:text-[40px] font-semibold md:leading-[50px] mb-[50px]">
+            <h2 className="text-2xl md:text-[40px] font-semibold md:leading-12.5 mb-12.5">
               We are a community of curious minds dedicated to shaping and
               showcasing responsible, representative AI in Africa. Through
               education, open conversations, events, and hands-on engagement, we
@@ -99,7 +98,7 @@ export default function About() {
 
       <section className="py-12 md:pb-19.5 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-2xl md:text-[40px] font-semibold md:leading-[50px] mb-12 md:mb-19.5 max-w-5xl">
+          <h2 className="text-2xl md:text-[40px] font-semibold md:leading-12.5 mb-12 md:mb-19.5 max-w-5xl">
             AI Lagos is powered by thinkers, builders, and organizers dedicated
             to responsibly shaping Africa&apos;s AI story.
           </h2>
@@ -119,7 +118,7 @@ export default function About() {
       </section>
 
       <Newsletter />
-      <Footer />
-    </main>
+
+    </div>
   );
 }

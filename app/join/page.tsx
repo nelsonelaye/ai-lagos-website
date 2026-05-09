@@ -1,5 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+// import Header from "@/components/Header";
+// import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Newsletter from "@/components/Newsletter";
 import CTASection from "@/components/CTASection";
@@ -8,8 +8,7 @@ import { communityLink, volunteerLink } from "@/utils/constants";
 
 export default function Join() {
   return (
-    <main className="min-h-screen bg-white">
-      <Header />
+  <div>
 
       <Hero
         backgroundImage="/images/hero-bg-3.png"
@@ -68,7 +67,6 @@ export default function Join() {
       </div>
 
       <Newsletter />
-      <Footer />
-    </main>
+  </div>
   );
 }

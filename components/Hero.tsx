@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Button from './Button';
-import { communityLink } from '@/utils/constants';
+import Image from "next/image";
+import Button from "./Button";
+import { communityLink } from "@/utils/constants";
 
 interface HeroProps {
   backgroundImage: string;
@@ -17,11 +17,12 @@ const Hero = ({ backgroundImage, title, description }: HeroProps) => {
         fill
         className="object-cover"
         priority
-        quality={100}
+        fetchPriority="high"
       />
       <div className="absolute inset-0 bg-black/40 z-0" />
 
-      <div className="w-full relative z-10 mx-auto px-6 flex flex-col items-center text-center">
+      {/* <div className="w-full relative z-10 mx-auto px-44 "> */}
+      <div className="w-full relative z-10 mx-auto px-44 flex flex-col items-center text-center">
         <h1 className="text-4xl md:text-[70px] font-semibold mb-5 md:mb-[45px] w-full max-w-4xl sm:leading-[40px] md:leading-[70px] tracking-0 text-primary">
           {title}
         </h1>
@@ -32,6 +33,7 @@ const Hero = ({ backgroundImage, title, description }: HeroProps) => {
           Join the Community
         </Button>
       </div>
+      {/* </div> */}
     </section>
   );
 };
