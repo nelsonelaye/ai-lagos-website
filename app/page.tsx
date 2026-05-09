@@ -64,7 +64,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex-1 flex flex-col sm:flex-row items-center max-sm:text-center md:gap-6 lg:gap-12">
+            <div className="flex-1 flex flex-col sm:flex-row items-center max-sm:text-center gap-6 lg:gap-12">
               <div className="flex flex-col gap-4 w-full max-w-[212px]">
                 <h3 className="text-3xl font-semibold md:text-4xl lg:text-[48px] leading-[30px]">
                   03+
