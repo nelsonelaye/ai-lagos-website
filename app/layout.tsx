@@ -2,6 +2,15 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Anek_Bangla } from "next/font/google";
 import "./globals.css";
 import AppLayout from "./layouts/AppLayout";
+import NProgress from "@/components/NProgress";
+
+// import { Router } from "next/router";
+// import NProgress from "@/components/NProgress";
+import "../app/styles/nprogress.css";
+
+// Router.events.on("routeChangeStart", () => NProgress.start());
+// Router.events.on("routeChangeComplete", () => NProgress.done());
+// Router.events.on("routeChangeError", () => NProgress.done());
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +49,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${anekBangla.variable} antialiased`}
         style={{ fontFamily: "var(--font-anek)" }}
       >
+        <NProgress />
         <AppLayout>{children}</AppLayout>
       </body>
     </html>
