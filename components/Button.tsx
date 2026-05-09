@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -20,7 +20,7 @@ const Button = ({
   target = "_self",
 }: ButtonProps) => {
   const baseStyles =
-    "px-[35px] h-[50px] md:h-[64px] flex items-center justify-center md:text-[20px] leading-[34.07px] rounded-[751.58px] transition-all duration-700 text-center w-fit";
+    "px-[35px] h-[50px] md:h-[64px] flex items-center justify-center md:text-[20px] leading-[34.07px] rounded-[751.58px] transition-all duration-700 text-center w-fit whitespace-nowrap";
 
   const variants = {
     primary: "bg-primary text-black hover:bg-primary/60",

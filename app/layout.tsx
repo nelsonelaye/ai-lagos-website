@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Anek_Bangla } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import AppLayout from "./layouts/AppLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +16,8 @@ const geistMono = Geist_Mono({
 const anekBangla = Anek_Bangla({
   variable: "--font-anek",
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -38,12 +38,9 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${anekBangla.variable} antialiased`}
+        style={{ fontFamily: "var(--font-anek)" }}
       >
-            <main className="min-h-screen bg-white">
-      <Header />
-        {children}
-        <Footer/>
-        </main>
+        <AppLayout>{children}</AppLayout>
       </body>
     </html>
   );

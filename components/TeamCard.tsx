@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import { FaLinkedin } from 'react-icons/fa';
+import Image from "next/image";
+import { FaLinkedin } from "react-icons/fa";
 
 interface TeamCardProps {
   image: string;
@@ -10,8 +10,8 @@ interface TeamCardProps {
 
 const TeamCard = ({ image, name, role, linkedin }: TeamCardProps) => {
   return (
-    <div className="bg-accent-2 p-2 md:p-4.5 rounded-[20px] overflow-hidden group h-full flex flex-col">
-      <div className="relative w-full h-[300px] md:h-[457px] rounded-[20px] overflow-hidden">
+    <div className="bg-accent-2 p-2 lg:p-4.5 rounded-[20px] overflow-hidden group h-full flex flex-col">
+      <div className="relative w-full h-[300px] lg:h-[457px] rounded-[20px] overflow-hidden">
         <Image
           src={image}
           alt={name}
@@ -22,11 +22,11 @@ const TeamCard = ({ image, name, role, linkedin }: TeamCardProps) => {
       </div>
       <div className="px-[11px] pt-[15px] pb-[27px] flex justify-between items-end">
         <div>
-          <h3 className="text-xl md:text-[32px] font-semibold md:leading-[50px] text-black mb-1">
+          <h3 className="text-xl lg:text-[32px] font-semibold lg:leading-[50px] text-black lg:mb-1">
             {name}
           </h3>
           {role && (
-            <p className="text-lg md:text-[24px] text-black md:leading-[30px]">
+            <p className="text-lg lg:text-[24px] text-black lg:leading-[30px]">
               {role}
             </p>
           )}
@@ -38,7 +38,7 @@ const TeamCard = ({ image, name, role, linkedin }: TeamCardProps) => {
             rel="noopener noreferrer"
             className="text-gray-100 hover:text-black transition-colors mb-1"
           >
-            <FaLinkedin className="cursor-pointer text-xl md:text-[28px]" />
+            <FaLinkedin className="cursor-pointer text-xl lg:text-[28px]" />
           </a>
         )}
       </div>

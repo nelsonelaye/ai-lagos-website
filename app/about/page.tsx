@@ -58,18 +58,17 @@ export default function About() {
   ];
 
   return (
-<div>
-
+    <div>
       <Hero
         backgroundImage="/images/hero-bg-2.png"
         title="Shaping Africa's AI Future, Responsibly"
         description="AI Lagos exists to ensure Africa has a voice in every AI conversation, decision, and innovation. Through education, community, and dialogue, we promote responsible, ethical, and inclusive AI adoption across the continent."
       />
 
-      <section className="py-12 md:py-19.5 bg-white">
+      <section className="py-12 lg:py-19.5 bg-white">
         <div className="container mx-auto px-6 ">
-          <div className="w-full md:w-[80%]">
-            <h2 className="text-2xl md:text-[40px] font-semibold md:leading-12.5 mb-12.5">
+          <div className="w-full lg:w-[80%]">
+            <h2 className="text-lg md:text-[34px] lg:text-[40px] font-semibold md:leading-12.5  lg:mb-12.5 ">
               We are a community of curious minds dedicated to shaping and
               showcasing responsible, representative AI in Africa. Through
               education, open conversations, events, and hands-on engagement, we
@@ -81,7 +80,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="pb-12 md:pb-24 bg-white">
+      <section className="pb-12 lg:pb-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
@@ -96,9 +95,9 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-12 md:pb-19.5 bg-white">
+      <section className="pb-12 lg:py-12 lg:pb-19.5 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-2xl md:text-[40px] font-semibold md:leading-12.5 mb-12 md:mb-19.5 max-w-5xl">
+          <h2 className="text-2xl md:text-[40px] font-semibold md:leading-12.5 mb-12 lg:mb-19.5 max-w-5xl">
             AI Lagos is powered by thinkers, builders, and organizers dedicated
             to responsibly shaping Africa&apos;s AI story.
           </h2>
@@ -118,7 +117,6 @@ export default function About() {
       </section>
 
       <Newsletter />
-
     </div>
   );
 }

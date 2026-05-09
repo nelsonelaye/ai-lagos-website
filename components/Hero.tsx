@@ -1,16 +1,23 @@
 import Image from "next/image";
 import Button from "./Button";
 import { communityLink } from "@/utils/constants";
+import { cn } from "@/utils/cn";
 
 interface HeroProps {
   backgroundImage: string;
-  title: string;
+  title: string | React.ReactNode;
   description: string;
+  titleClassName?: string;
 }
 
-const Hero = ({ backgroundImage, title, description }: HeroProps) => {
+const Hero = ({
+  backgroundImage,
+  title,
+  description,
+  titleClassName,
+}: HeroProps) => {
   return (
-    <section className="relative h-[80vh] sm:h-screen w-full flex items-center justify-center overflow-hidden bg-neutral-100">
+    <section className="relative h-[80vh] sm:h-screen 3xl:max-h-[851px] w-full flex items-center justify-center overflow-hidden bg-neutral-100">
       <Image
         src={backgroundImage}
         alt="Hero Background"
@@ -22,18 +29,26 @@ const Hero = ({ backgroundImage, title, description }: HeroProps) => {
       <div className="absolute inset-0 bg-black/40 z-0" />
 
       {/* <div className="w-full relative z-10 mx-auto px-44 "> */}
-      <div className="w-full relative z-10 mx-auto px-44 flex flex-col items-center text-center">
-        <h1 className="text-4xl md:text-[70px] font-semibold mb-5 md:mb-[45px] w-full max-w-4xl sm:leading-[40px] md:leading-[70px] tracking-0 text-primary">
+      <div
+        className={cn(
+          "w-full relative z-10 mx-auto px-5 flex flex-col items-center text-center md:w-[70%] lg:max-w-4xl",
+          titleClassName,
+        )}
+      >
+        <h1
+          className={cn(
+            "text-4xl md:text-5xl lg:text-[70px] font-semibold mb-5 lg:mb-[45px] w-full  sm:leading-[40px] md:leading-[50px] lg:leading-[70px] tracking-0 text-primary",
+          )}
+        >
           {title}
         </h1>
-        <p className="text-lg md:text-[24px] mb-5 md:mb-[45px] max-w-3xl text-neutral-200 md:leading-[30px]">
+        <p className="md:text-lg lg:text-[24px] mb-5 lg:mb-[45px] max-w-2xl text-neutral-200 md:leading-[30px]">
           {description}
         </p>
         <Button href={communityLink} target="_blank">
           Join the Community
         </Button>
       </div>
-      {/* </div> */}
     </section>
   );
 };

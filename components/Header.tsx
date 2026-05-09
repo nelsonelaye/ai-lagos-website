@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { eventLink, substackLink } from "@/utils/constants";
+import { contactEmail, eventLink } from "@/utils/constants";
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { FiMenu } from "react-icons/fi";
@@ -13,7 +13,7 @@ const navLinks = [
   { name: "partner with us", href: "/partner" },
   // { name: "blog", href: substackLink, target: "_blank" },
   { name: "join us", href: "/join" },
-  { name: "contact us", href: "#footer" },
+  { name: "contact us", href: `mailto:${contactEmail}`, target: "_blank" },
 ];
 
 const Header = () => {
@@ -21,8 +21,8 @@ const Header = () => {
 
   return (
     <header className="absolute top-0 left-0 right-0 z-50">
-      <div className="w-full mx-auto px-6 py-4 md:px-16 md:py-6 flex justify-between items-center">
-        <Link href="/" className="relative w-28 md:w-44">
+      <div className="w-full 3xl:max-w-5xl mx-auto px-6 py-4 lg:px-16 lg:py-6 flex justify-between items-center">
+        <Link href="/" className="relative w-28 lg:w-44">
           <Image
             src="/images/logo-white.svg"
             alt="AI Lagos Logo"
@@ -46,10 +46,10 @@ const Header = () => {
         </nav>
 
         <button
-          className="md:hidden"
+          className="md:hidden cursor-pointer"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          <FiMenu className="w-6 h-6" color="white" />
+          <FiMenu className="w-6 h-6 cursor-pointer" color="white" />
         </button>
       </div>
 
@@ -80,9 +80,15 @@ const Header = () => {
                 height={82}
                 className="object-cover"
               />
-              <button onClick={() => setIsMobileMenuOpen(false)}>
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="cursor-pointer"
+              >
                 {/* <IoMdClose className="w-6 h-6" /> */}
-                <AiOutlineClose className="w-6 h-6" color="white" />
+                <AiOutlineClose
+                  className="w-6 h-6 cursor-pointer"
+                  color="white"
+                />
               </button>
             </div>
             <div className="flex flex-col gap-4 mt-4">
@@ -90,8 +96,7 @@ const Header = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-              target={link.target}
-
+                  target={link.target}
                   className="hover:text-primary transition-colors duration-700 text-white text-2xl"
                 >
                   {link.name}

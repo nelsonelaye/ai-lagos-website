@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Button from './Button';
-import { cn } from '@/utils/cn';
+import Image from "next/image";
+import Button from "./Button";
+import { cn } from "@/utils/cn";
 
 interface CTASectionProps {
   title: string;
@@ -26,10 +26,33 @@ const CTASection = ({
   return (
     <section className={cn("bg-white", className)}>
       <div className="container mx-auto">
-        <div className="w-full flex flex-col md:flex-row md:h-[585px] gap-5">
+        <div className="w-full flex flex-col md:flex-row md:h-[550px] gap-5">
           <div
-            className={`bg-primary rounded-[20px] p-6 md:p-12 min-h-[300px] w-full h-full flex flex-col justify-between md:flex-[0.8] relative overflow-hidden group ${reverse ? "md:order-2" : "md:order-1"}`}
+            className={`bg-primary rounded-[20px] p-6 lg:p-12 min-h-[300px] w-full h-full flex flex-col md:flex-[0.8] relative overflow-hidden group ${reverse ? "md:order-2" : "md:order-1"}`}
           >
+            <div className="z-10 flex-[0.">
+              {label && (
+                <div className="relative flex items-center mb-4">
+                  <div className="w-[45px] h-[45px] lg:w-[65px] lg:h-[65px] rounded-full bg-white " />
+                  <span className="ml-[-30px] lg:ml-[-46px] text-sm lg:text-base font-semibold uppercase leading-[30px] text-black">
+                    {label}
+                  </span>
+                </div>
+              )}
+              <h2 className="text-2xl lg:text-[40px] font-semibold lg:leading-[50px] mb-8">
+                {title}
+              </h2>
+            </div>
+
+            <Button
+              href={buttonHref}
+              variant="secondary"
+              className="self-start relative z-10 min-h-[63px]!"
+              target="_blank"
+            >
+              {buttonText}
+            </Button>
+
             {/* Sparkle background element */}
             <div className="absolute bottom-[14px] right-0 w-fit h-[70%]">
               <Image
@@ -40,28 +63,6 @@ const CTASection = ({
                 className="w-full h-full"
               />
             </div>
-            <div className="z-10 mb-[80px]">
-              {label && (
-                <div className="relative flex items-center mb-4">
-                  <div className="w-[45px] h-[45px] md:w-[65px] md:h-[65px] rounded-full bg-white " />
-                  <span className="ml-[-30px] md:ml-[-46px] text-sm md:text-base font-semibold uppercase leading-[30px] text-black">
-                    {label}
-                  </span>
-                </div>
-              )}
-              <h2 className="text-2xl md:text-[40px] font-semibold md:leading-[50px] mb-8">
-                {title}
-              </h2>
-            </div>
-
-            <Button
-              href={buttonHref}
-              variant="secondary"
-              className="self-start relative z-10"
-              target="_blank"
-            >
-              {buttonText}
-            </Button>
           </div>
 
           <div

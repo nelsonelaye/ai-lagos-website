@@ -5,19 +5,19 @@ import CTASection from "@/components/CTASection";
 import Newsletter from "@/components/Newsletter";
 import Image from "next/image";
 import { communityLink, substackLink } from "@/utils/constants";
+import PartnerCTA from "@/components/PartnerCTA";
 
 export default function Home() {
   return (
     <div>
- 
-
       <Hero
         backgroundImage="/images/hero-bg-1.png"
         title="Responsible & Representative AI for Africa"
         description="AI Lagos is building a community committed to responsible, ethical, and locally informed AI adoption across the continent."
+        titleClassName="lg:max-w-4xl"
       />
 
-      <section className="py-12 pb-28 md:py-19.5 md:pb-34 bg-white overflow-hidden relative">
+      <section className="py-12 md:py-19.5 md:pb-34 bg-white overflow-hidden relative">
         <div className="container mx-auto px-6 relative z-10">
           {/* Sparkeles */}
 
@@ -42,9 +42,8 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="w-full relative justify-between flex gap-15 md:items-end flex-col md:flex-row ">
+          <div className="w-full relative justify-between flex md:gap-8 lg:gap-15 md:items-end flex-col md:flex-row ">
             {/* More Sparkeles */}
-
             <div className="absolute top-0 md:top-[80px] w-[560px] h-[600px] left-0 -translate-x-[60%] ">
               <Image
                 src="/images/spark-grey.svg"
@@ -65,21 +64,21 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex-1 flex flex-col sm:flex-row items-center max-sm:text-center gap-12">
+            <div className="flex-1 flex flex-col sm:flex-row items-center max-sm:text-center md:gap-6 lg:gap-12">
               <div className="flex flex-col gap-4 w-full max-w-[212px]">
-                <h3 className="text-3xl font-semibold md:text-[48px] leading-[30px]">
-                  02+
+                <h3 className="text-3xl font-semibold md:text-4xl lg:text-[48px] leading-[30px]">
+                  03+
                 </h3>
-                <p className="text-sm text-black md:leading-[18px]">
+                <p className="text-sm text-black lg:leading-[18px]">
                   <span className="font-semibold">Events Hosted Workshops</span>
                   <br /> and community conversations.
                 </p>
               </div>
               <div className="flex flex-col gap-4 w-full max-w-[191px]">
-                <h3 className="text-3xl font-semibold md:text-[48px] leading-[30px]">
+                <h3 className="text-3xl font-semibold md:text-4xl lg:text-[48px] leading-[30px]">
                   100+
                 </h3>
-                <p className="text-sm text-black md:leading-[18px]">
+                <p className="text-sm text-black lg:leading-[18px]">
                   <span className="font-semibold">
                     Speakers & Experts Engaged
                   </span>
@@ -87,10 +86,10 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col gap-4 w-full max-w-[212px]">
-                <h3 className="text-3xl font-semibold md:text-[48px] md:leading-[30px]">
+                <h3 className="text-3xl font-semibold md:text-4xl lg:text-[48px] leading-[30px]">
                   50+
                 </h3>
-                <p className="text-sm text-black leading-[18px]">
+                <p className="text-sm text-black lg:leading-[18px]">
                   <span className="font-semibold">Community Members</span>
                   <br /> A growing network of curious minds.
                 </p>
@@ -115,7 +114,16 @@ export default function Home() {
         buttonText="Join the Community"
         buttonHref={communityLink}
         imageSrc="/images/team.png"
-        imageAlt="AI Lagos Team"className="mb-28 md:mb-34"
+        imageAlt="AI Lagos Team"
+        className="mb-8 md:mb-16"
+      />
+
+      <PartnerCTA
+        title="Are You Building the Future of AI in Africa?"
+        description="If you're a brand, organization, or team passionate about innovation, education, or community, we’d love to collaborate with you."
+        buttonText="Become a Partner"
+        buttonHref="mailto:info@ailagos.org?subject=AI Lagos Partnership&body=Hi AI Lagos team, I'm interested in partnering with you."
+        className="md:mb-13!"
       />
 
       {/* Blog & Resources Section */}
@@ -159,8 +167,6 @@ export default function Home() {
       </section>
 
       <Newsletter />
-
-
     </div>
   );
 }

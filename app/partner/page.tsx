@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Newsletter from "@/components/Newsletter";
 import PartnerCTA from "@/components/PartnerCTA";
+import ValueCard from "@/components/ValueCard";
 import Image from "next/image";
 
 export default function Partner() {
@@ -42,7 +43,7 @@ export default function Partner() {
     <div>
       <Hero
         backgroundImage="/images/partener-hero.png"
-        title={`Help Shape Africa's \n\n AI Future`}
+        title="Help Shape Africa's AI Future"
         description="AI is moving fast globally. Africa cannot be left behind. At AI Lagos, we are building a community of thinkers, builders, and leaders driving responsible AI across the continent."
       />
 
@@ -51,8 +52,8 @@ export default function Partner() {
         <div className="container mx-auto px-6 relative z-10">
           {/* Sparkles */}
 
-          <div className="w-full mb-6 md:mb-9 md:w-[80%]">
-            <span className="lg:text-xl font-normal mb-7 block">
+          <div className="w-full mb-6 md:mb-9 lg:w-[80%]">
+            <span className="lg:text-xl font-normal mb-4 lg:mb-6 block">
               Why Partner With AI Lagos
             </span>
             <h2 className="text-2xl md:text-[40px] font-semibold md:leading-[50px]">
@@ -64,28 +65,12 @@ export default function Partner() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-              <div
+              <ValueCard
                 key={index}
-                className="bg-neutral-100 min-h-[326px] p-6 pb-9 rounded-[9.1px] flex flex-col justify-between"
-              >
-                <div className="w-[122px] h-[122px] bg-white rounded-full flex items-center justify-center mb-6 p-5.5">
-                  <Image
-                    src={benefit.icon}
-                    alt={benefit.title}
-                    width={72}
-                    height={72}
-                    className="object-contain w-full h-full max-w-[90px]! max-h-[90px]!"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-semibold md:leading-[25px] text-black mb-3.5">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-sm md:leading-[16px] text-black w-[80%]">
-                    {benefit.text}
-                  </p>
-                </div>
-              </div>
+                icon={benefit.icon}
+                title={benefit.title}
+                text={benefit.text}
+              />
             ))}
           </div>
         </div>
@@ -94,8 +79,8 @@ export default function Partner() {
       {/* Partner Reach Pills Section */}
       <section className="mb-10 md:mb-14 bg-white">
         <div className="container mx-auto px-6">
-          <div className="w-full mb-6 md:mb-12 max-w-4xl">
-            <span className="lg:text-xl font-normal mb-6 block">
+          <div className="w-full mb-6 md:mb-12 lg:max-w-4xl">
+            <span className="lg:text-xl font-normal mb-4 lg:mb-6 block">
               Who You’ll Be Reaching
             </span>
             <h2 className="text-2xl md:text-[40px] font-semibold md:leading-[50px]">
@@ -105,9 +90,9 @@ export default function Partner() {
           </div>
 
           <div className="flex flex-wrap gap-4 md:gap-x-6 md:gap-y-7 mb-9 md:mb-[61px] max-w-7xl">
-            {audience?.map((item) => (
+            {audience?.map((item, index) => (
               <div
-                key={item}
+                key={item + index}
                 className="px-6 py-3 rounded-full"
                 style={{
                   background:
@@ -157,53 +142,60 @@ export default function Partner() {
       {/* Partnership Benefits Section */}
       <section className="mb-10 md:mb-[45px] bg-white">
         <div className="container mx-auto px-6">
-          <div className="w-full mb-6 md:mb-12 max-w-7xl">
-            <span className="lg:text-xl font-normal mb-6 block">
+          <div className="w-full mb-6 md:mb-9 lg:w-[80%]">
+            <span className="lg:text-xl font-normal mb-4 lg:mb-6 block">
               Ways We Can Work Together
             </span>
             <h2 className="text-2xl md:text-[40px] font-semibold md:leading-[50px]">
               We believe partnerships should be flexible and meaningful. Here
-              are a few ways we collaborate , we’re open to your ideas too.
+              are a few ways we collaborate, we’re open to your ideas too.
             </h2>
           </div>
 
           <div className="bg-primary rounded-[20px] p-6 md:p-12 lg:py-[77px]  relative overflow-hidden">
             {/* Sparkle background element */}
-            <div className="absolute bottom-[14px] right-0 w-fit h-[70%]">
-              <Image
-                src="/images/spark-yellow.svg"
-                alt="Sparkle"
-                width={400}
-                height={400}
-                className="w-full h-full "
-              />
-            </div>
+
             <div className="relative z-10 w-full">
-              <ul className="space-y-5">
+              <ul className="space-y-2 md:space-y-3 lg:space-y-5">
                 {partnershipOptions.map((option, index) => (
-                  <li key={index} className="flex items-center">
-                    <div className="bg-white rounded-full overflow-hidden w-fit mr-4 ">
+                  <li key={index} className="flex items-center leading-0">
+                    <div className="w-6 h-6 md:w-[34px] md:h-[34px] bg-white shrink-0 rounded-full overflow-hidden mr-4 ">
                       <Image
                         src="/images/innovation-gold.svg"
                         alt="Star"
                         width={24}
                         height={24}
-                        className="md:w-[34px] md:h-[34px]"
+                        className="w-full h-full"
                       />
                     </div>
 
-                    <span className=" text-black text-lg md:text-xl lg:text-[40px] font-semibold">
+                    <span className=" text-black text-lg md:text-2xl lg:text-[40px] font-semibold">
                       {option}
                     </span>
                   </li>
                 ))}
               </ul>
             </div>
+
+            <div className="w-[60%] md:w-fit absolute bottom-[14px] md:top-6 right-3 md:right-10 h-[85%]">
+              <Image
+                src="/images/double-spark.svg"
+                alt="Sparkle"
+                width={400}
+                height={400}
+                className="w-full h-full 3xl:max-w-[448px]"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <PartnerCTA />
+      <PartnerCTA
+        title="Partner with us "
+        description="AI Lagos is powered by a community of builders, organizers, and curious minds. Through events, conversations, and collaborations, we are creating spaces for learning, connection, and innovation."
+        buttonText="Become a Partner"
+        buttonHref="mailto:partnerships@ailagos.org"
+      />
 
       <Newsletter />
     </div>

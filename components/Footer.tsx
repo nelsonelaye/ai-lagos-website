@@ -1,4 +1,4 @@
-import { eventLink } from "@/utils/constants";
+import { contactEmail, eventLink } from "@/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin, FaInstagram } from "react-icons/fa";
@@ -54,7 +54,9 @@ const Footer = () => {
             <h4 className="font-semibold md:text-[24px] leading-7.5 mb-2">
               Contact us
             </h4>
-            <p className="text-black mb-1.75 leading-7.5">info@ailagos.org</p>
+            <p className="text-black mb-1.75 leading-7.5">
+              <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+            </p>
             <div className="flex gap-1">
               {socialLinks.map((social, index) => (
                 <Link

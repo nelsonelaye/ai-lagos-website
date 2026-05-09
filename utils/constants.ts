@@ -7,3 +7,5 @@ export const eventLink =
   "https://www.usetika.africa/events/ai-at-work-19dd18eb";
 
 export const substackLink = "https://substack.com/@ailagos";
+
+export const contactEmail = "info@ailagos.org";
