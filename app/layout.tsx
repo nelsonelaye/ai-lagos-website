@@ -44,6 +44,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="shortcut icon" href="/images/favicon.ico" />
+        <link rel="preload" as="image" href="/images/hero-bg-1.png" />
+        <link rel="preload" as="image" href="/images/hero-bg-2.png" />
+        <link rel="preload" as="image" href="/images/hero-bg-3.png" />
+        <link rel="preload" as="image" href="/images/partener-hero.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${anekBangla.variable} antialiased`}

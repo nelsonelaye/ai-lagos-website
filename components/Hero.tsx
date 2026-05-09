@@ -17,7 +17,7 @@ const Hero = ({
   titleClassName,
 }: HeroProps) => {
   return (
-    <section className="relative h-[80vh] sm:h-screen 3xl:max-h-[851px] w-full flex items-center justify-center overflow-hidden bg-neutral-100">
+    <section className="relative h-[80vh] sm:h-screen 3xl:max-h-[851px] w-full flex items-center justify-center overflow-hidden bg-black">
       <Image
         src={backgroundImage}
         alt="Hero Background"
