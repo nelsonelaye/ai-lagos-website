@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Anek_Bangla } from "next/font/google";
+import { Suspense } from "react";
 import "./globals.css";
 import AppLayout from "./layouts/AppLayout";
 import NProgress from "@/components/NProgress";
@@ -53,7 +54,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${anekBangla.variable} antialiased`}
         style={{ fontFamily: "var(--font-anek)" }}
       >
-        <NProgress />
+        <Suspense fallback={null}>
+          <NProgress />
+        </Suspense>
         <AppLayout>{children}</AppLayout>
       </body>
     </html>
