@@ -122,7 +122,6 @@ export default function Home() {
         title="Are You Building the Future of AI in Africa?"
         description="If you're a brand, organization, or team passionate about innovation, education, or community, we’d love to collaborate with you."
         buttonText="Become a Partner"
-        buttonHref="mailto:info@ailagos.org?subject=AI Lagos Partnership&body=Hi AI Lagos team, I'm interested in partnering with you."
         className="md:mb-13!"
       />
 

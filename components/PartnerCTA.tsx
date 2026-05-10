@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Button from "./Button";
 import { cn } from "@/utils/cn";
+import { partnerLink } from "@/utils/constants";
 
 interface PartnerCTAProps {
   title?: string;
@@ -30,12 +31,11 @@ const PartnerCTA = ({
             </p>
           </div>
           <Button
-            // href={buttonHref}
-            href="mailto:info@ailagos.org?subject=AI Lagos Partnership&body=Hi AI Lagos team, I'm interested in partnering with you."
+            href={buttonHref ?? partnerLink}
             variant="secondary"
             className="lg:mr-[52px] "
           >
-            {buttonText}
+            {buttonText ?? "Become a Partner"}
           </Button>
 
           {/* Decorative stars */}

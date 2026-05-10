@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Newsletter from "@/components/Newsletter";
 import PartnerCTA from "@/components/PartnerCTA";
 import ValueCard from "@/components/ValueCard";
+import { partnerLink } from "@/utils/constants";
 import Image from "next/image";
 
 export default function Partner() {
@@ -45,7 +46,9 @@ export default function Partner() {
         backgroundImage="/images/partener-hero.png"
         title="Help Shape Africa's AI Future"
         description="AI is moving fast globally. Africa cannot be left behind. At AI Lagos, we are building a community of thinkers, builders, and leaders driving responsible AI across the continent."
-      />
+    buttonText="Become a Partner"
+    buttonHref={partnerLink}
+    />
 
       {/* Partner Audience Section */}
       <section className="py-10 md:py-16 bg-white overflow-hidden relative">
@@ -194,7 +197,7 @@ export default function Partner() {
         title="Partner with us "
         description="AI Lagos is powered by a community of builders, organizers, and curious minds. Through events, conversations, and collaborations, we are creating spaces for learning, connection, and innovation."
         buttonText="Become a Partner"
-        buttonHref="mailto:partnerships@ailagos.org"
+
       />
 
       <Newsletter />

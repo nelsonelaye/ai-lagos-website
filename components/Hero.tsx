@@ -8,6 +8,8 @@ interface HeroProps {
   title: string | React.ReactNode;
   description: string;
   titleClassName?: string;
+  buttonText?: string;
+  buttonHref?: string;
 }
 
 const Hero = ({
@@ -15,6 +17,9 @@ const Hero = ({
   title,
   description,
   titleClassName,
+  buttonText,
+  buttonHref
+
 }: HeroProps) => {
   return (
     <section className="relative h-[80vh] sm:h-screen 3xl:max-h-[851px] w-full flex items-center justify-center overflow-hidden bg-black">
@@ -45,8 +50,8 @@ const Hero = ({
         <p className="md:text-lg lg:text-[24px] mb-5 lg:mb-[45px] max-w-2xl text-neutral-200 md:leading-[30px]">
           {description}
         </p>
-        <Button href={communityLink} target="_blank">
-          Join the Community
+        <Button href={buttonHref ?? communityLink} target="_blank">
+         {buttonText ?? "Join the Community"}
         </Button>
       </div>
     </section>

@@ -9,3 +9,6 @@ export const eventLink =
 export const substackLink = "https://substack.com/@ailagos";
 
 export const contactEmail = "info@ailagos.org";
+
+export const partnerLink =  "mailto:info@ailagos.org?subject=AI Lagos Partnership&body=Hi AI Lagos team, I'm interested in partnering with you."
+
