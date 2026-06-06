@@ -1,4 +1,5 @@
 import Button from "./Button";
+import HeroBackground from "./HeroBackground";
 import { communityLink } from "@/utils/constants";
 import { cn } from "@/utils/cn";
 
@@ -20,12 +21,8 @@ const Hero = ({
   buttonHref,
 }: HeroProps) => {
   return (
-    <section className="hero-section relative h-[80vh] sm:h-screen 3xl:max-h-[851px] w-full flex items-center justify-center overflow-hidden bg-black [clip-path:inset(0)]">
-      <div
-        className="hero-bg fixed inset-0 z-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-        aria-hidden="true"
-      />
+    <section className="relative h-[80vh] sm:h-screen 3xl:max-h-[851px] w-full flex items-center justify-center overflow-hidden bg-black [clip-path:inset(0)]">
+      <HeroBackground image={backgroundImage} />
       <div className="absolute inset-0 bg-black/40 z-0" />
 
       {/* <div className="w-full relative z-10 mx-auto px-44 "> */}
