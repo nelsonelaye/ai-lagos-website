@@ -44,6 +44,29 @@ body {
   font-family: var(--font-anek), "Anek Bangla", sans-serif;
 }
 
+.hero-section {
+  view-timeline-name: --hero;
+}
+
+.hero-bg {
+  animation: hero-bg-expand linear both;
+  animation-timeline: --hero;
+  animation-range: entry 0% exit 100%;
+  transform: scale(1.04);
+}
+
+@keyframes hero-bg-expand {
+  to {
+    transform: scale(1.8);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg {
+    animation: none;
+  }
+}
+
 .container {
   width: 100% !important;
   max-width: 100% !important;

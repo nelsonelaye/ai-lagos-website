@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Button from "./Button";
 import { communityLink } from "@/utils/constants";
 import { cn } from "@/utils/cn";
@@ -18,18 +17,14 @@ const Hero = ({
   description,
   titleClassName,
   buttonText,
-  buttonHref
-
+  buttonHref,
 }: HeroProps) => {
   return (
-    <section className="relative h-[80vh] sm:h-screen 3xl:max-h-[851px] w-full flex items-center justify-center overflow-hidden bg-black">
-      <Image
-        src={backgroundImage}
-        alt="Hero Background"
-        fill
-        className="object-cover"
-        priority
-        fetchPriority="high"
+    <section className="hero-section relative h-[80vh] sm:h-screen 3xl:max-h-[851px] w-full flex items-center justify-center overflow-hidden bg-black [clip-path:inset(0)]">
+      <div
+        className="hero-bg fixed inset-0 z-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+        aria-hidden="true"
       />
       <div className="absolute inset-0 bg-black/40 z-0" />
 
@@ -51,7 +46,7 @@ const Hero = ({
           {description}
         </p>
         <Button href={buttonHref ?? communityLink} target="_blank">
-         {buttonText ?? "Join the Community"}
+          {buttonText ?? "Join the Community"}
         </Button>
       </div>
     </section>
