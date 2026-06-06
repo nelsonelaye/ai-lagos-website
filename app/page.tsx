@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Button from "@/components/Button";
 import CTASection from "@/components/CTASection";
 import Newsletter from "@/components/Newsletter";
+import AnimatedStat from "@/components/AnimatedStat";
 import Image from "next/image";
 import { communityLink, substackLink } from "@/utils/constants";
 import PartnerCTA from "@/components/PartnerCTA";
@@ -66,18 +67,21 @@ export default function Home() {
 
             <div className="flex-1 flex flex-col sm:flex-row items-center max-sm:text-center gap-6 lg:gap-12">
               <div className="flex flex-col gap-4 w-full max-w-[212px]">
-                <h3 className="text-3xl font-semibold md:text-4xl lg:text-[48px] leading-[30px]">
-                  03+
-                </h3>
+                <AnimatedStat
+                  value={3}
+                  padStart={2}
+                  className="text-3xl font-semibold md:text-4xl lg:text-[48px] leading-[30px]"
+                />
                 <p className="text-sm text-black lg:leading-[18px]">
                   <span className="font-semibold">Events Hosted Workshops</span>
                   <br /> and community conversations.
                 </p>
               </div>
               <div className="flex flex-col gap-4 w-full max-w-[191px]">
-                <h3 className="text-3xl font-semibold md:text-4xl lg:text-[48px] leading-[30px]">
-                  100+
-                </h3>
+                <AnimatedStat
+                  value={100}
+                  className="text-3xl font-semibold md:text-4xl lg:text-[48px] leading-[30px]"
+                />
                 <p className="text-sm text-black lg:leading-[18px]">
                   <span className="font-semibold">
                     Speakers & Experts Engaged
@@ -86,9 +90,10 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col gap-4 w-full max-w-[212px]">
-                <h3 className="text-3xl font-semibold md:text-4xl lg:text-[48px] leading-[30px]">
-                  50+
-                </h3>
+                <AnimatedStat
+                  value={50}
+                  className="text-3xl font-semibold md:text-4xl lg:text-[48px] leading-[30px]"
+                />
                 <p className="text-sm text-black lg:leading-[18px]">
                   <span className="font-semibold">Community Members</span>
                   <br /> A growing network of curious minds.
