@@ -3,8 +3,7 @@ export const communityLink =
 export const volunteerLink =
   "https://docs.google.com/forms/d/e/1FAIpQLSdmRsqqLJNUQYR43sNjEfKqspMZB9d3yS945V26JR6mrkrKUA/viewform";
 
-export const eventLink =
-  "https://www.usetika.africa/events/build-your-first-ai-agent-fe14c06c";
+export const eventLink = "https://www.usetika.africa/events/ai-policy-forum-8db4f799";
 
 export const substackLink = "https://substack.com/@ailagos";
 

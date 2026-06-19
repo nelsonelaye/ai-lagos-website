@@ -91,7 +91,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-4 w-full max-w-[212px]">
                 <AnimatedStat
-                  value={50}
+                  value={800}
                   className="text-3xl font-semibold md:text-4xl lg:text-[48px] leading-[30px]"
                 />
                 <p className="text-sm text-black lg:leading-[18px]">
