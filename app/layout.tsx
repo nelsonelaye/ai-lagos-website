@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Anek_Bangla } from "next/font/google";
 import { Suspense } from "react";
@@ -58,6 +59,8 @@ export default function RootLayout({
           <NProgress />
         </Suspense>
         <AppLayout>{children}</AppLayout>
+
+        <Analytics />
       </body>
     </html>
   );
